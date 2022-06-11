@@ -18,6 +18,7 @@
       "32": "public/favicon-32x32.png"
     }
   },
+  "options_page": "options/index.html",
   "icons": {
     "16": "public/favicon-16x16.png",
     "48": "public/favicon.ico"
