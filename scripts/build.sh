@@ -1,2 +1,3 @@
+rm -rf ./dist
 mkdir -p dist
-cp manifest.json dist/
+cp ./src/manifest.json dist/
