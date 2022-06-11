@@ -1,0 +1,10 @@
+{
+  "name": "chrome-extension-template",
+  "version": "1.0.0",
+  "description": "chrome extension template",
+  "scripts": {
+  },
+  "keywords": ["chrome", "extension", "v3"],
+  "author": "yongx",
+  "license": "GPL 3.0"
+}
