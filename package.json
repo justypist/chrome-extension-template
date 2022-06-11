@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "chrome extension template",
   "scripts": {
+    "prepare": "chmod +x ./scripts/*.sh",
+    "build": "./scripts/build.sh"
   },
   "keywords": ["chrome", "extension", "v3"],
   "author": "yongx",
