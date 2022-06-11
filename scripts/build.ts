@@ -1,6 +1,6 @@
 import { exec } from 'child_process';
 import { existsSync } from 'fs';
-import { rm, mkdir, readFile, writeFile } from 'fs/promises';
+import { rm, mkdir, readFile, writeFile, copyFile, cp } from 'fs/promises';
 import { resolve } from 'path';
 
 (async () => {
@@ -27,6 +27,23 @@ import { resolve } from 'path';
   );
 
   // 将ts编译为js写入目标目录
-  exec('pwd', console.debug);
-  exec('npx tsc --project tsconfig.prod.json');
+  await new Promise((resolve, reject) => {
+    exec('npx tsc --project tsconfig.prod.json', (err, stdout, stderr) => {
+      if (err || stderr) {
+        reject();
+      }
+      resolve(stdout);
+    });
+  });
+
+  // 将index.html复制到各个目录
+  await copyFile(
+    resolve('src', 'popup', 'index.html'),
+    resolve('dist', 'popup', 'index.html'),
+  );
+
+  // public公共资源直接复制
+  await cp(resolve('src', 'public'), resolve('dist', 'public'), {
+    recursive: true,
+  });
 })();
