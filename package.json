@@ -4,7 +4,7 @@
   "description": "chrome extension template",
   "scripts": {
     "prepare": "chmod +x ./scripts/*.sh && ./scripts/prepare.sh",
-    "build": "./scripts/build.sh",
+    "build": "ts-node ./scripts/build.ts",
     "dev": "pnpm build && tsc -w"
   },
   "keywords": [
@@ -26,6 +26,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^8.0.1",
     "prettier": "^2.6.2",
+    "ts-node": "^10.8.1",
     "typescript": "^4.7.3"
   }
 }

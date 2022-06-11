@@ -1,17 +1,18 @@
 {
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
   "compilerOptions": {
     "target": "ES2015",
     "module": "ESNext",
     "moduleResolution": "Node",
     "baseUrl": "src",
     "paths": {},
-    "sourceMap": true,
     "outDir": "dist",
     "strict": true,
     "skipLibCheck": true
   },
-  "include": [
-    "src/manifest.json",
-    "src/**/*.ts",
-  ]
+  "include": ["src/manifest.json", "src/**/*.ts"]
 }

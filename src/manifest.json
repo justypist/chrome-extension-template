@@ -1,8 +1,12 @@
 {
+  "$schema": "https://json.schemastore.org/chrome-manifest",
   "name": "Chrome Extension Template",
   "description": "谷歌浏览器插件模板",
   "version": "1.0",
   "manifest_version": 3,
+  "permissions": [
+    "storage"
+  ],
   "background": {
     "service_worker": "background/index.js"
   }
