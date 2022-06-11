@@ -36,10 +36,16 @@ import { resolve } from 'path';
     });
   });
 
-  // 将index.html复制到各个目录
+  // 将popup/index.html复制到各个目录
   await copyFile(
     resolve('src', 'popup', 'index.html'),
     resolve('dist', 'popup', 'index.html'),
+  );
+
+  // options/index.html复制到各个目录
+  await copyFile(
+    resolve('src', 'options', 'index.html'),
+    resolve('dist', 'options', 'index.html'),
   );
 
   // public公共资源直接复制
