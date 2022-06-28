@@ -4,6 +4,7 @@
   "description": "chrome extension template",
   "scripts": {
     "prepare": "chmod +x ./scripts/*.sh && ./scripts/prepare.sh",
+    "clean": "rm -rf dist node_modules",
     "build": "ts-node ./scripts/build.ts",
     "dev": "pnpm build && tsc -w"
   },
